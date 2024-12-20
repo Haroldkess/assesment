@@ -46,13 +46,13 @@ class InvestmentCard extends StatelessWidget {
                   children: [
                     TextWidget(
                       text: investment.roi,
-                      fontSize: 15.sp.toInt(),
+                      fontSize: 15,
                       fontWeight: FontWeight.w600,
                       color: AppColors.kSecondary,
                     ),
                     TextWidget(
                       text: investment.duration,
-                      fontSize: 13.sp.toInt(),
+                      fontSize: 13,
                       fontWeight: FontWeight.w300,
                     ),
                   ],
@@ -68,20 +68,20 @@ class InvestmentCard extends StatelessWidget {
                   children: [
                     TextWidget(
                       text: investment.name,
-                      fontSize: 15.sp.toInt(),
+                      fontSize: 15,
                       fontWeight: FontWeight.w700,
                       color: AppColors.kText,
                     ),
                     AppDimens.gaps,
                     TextWidget(
                       text: investment.price,
-                      fontSize: 15.sp.toInt(),
+                      fontSize: 15,
                       fontWeight: FontWeight.w700,
                       color: AppColors.kText,
                     ),
                     TextWidget(
                       text: unit,
-                      fontSize: 13.sp.toInt(),
+                      fontSize: 13,
                       fontWeight: FontWeight.w300,
                       color: AppColors.kText,
                     ),
@@ -93,7 +93,7 @@ class InvestmentCard extends StatelessWidget {
                   children: [
                     TextWidget(
                       text: investment.status,
-                      fontSize: 13.sp.toInt(),
+                      fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: investment.status.contains(status)
                           ? AppColors.error

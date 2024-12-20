@@ -15,6 +15,7 @@ class TextWidget extends StatelessWidget {
   final Color? color;
   final FontWeight? fontWeight;
   final bool isPrice;
+  final double? lineHeight;
   const TextWidget(
       {super.key,
       required this.text,
@@ -26,6 +27,7 @@ class TextWidget extends StatelessWidget {
       this.maxLines,
       this.fontStyle,
       this.textOverflow,
+      this.lineHeight,
       this.fontWeight,
       this.textDecoration});
 
@@ -65,6 +67,7 @@ class TextWidget extends StatelessWidget {
               fontSize: fontSize.sp,
               fontWeight: fontWeight,
               fontStyle: fontStyle,
+              height: lineHeight,
               decoration: textDecoration,
             ),
     );

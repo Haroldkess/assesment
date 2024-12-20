@@ -10,7 +10,6 @@ import 'package:assesment/view/presentation/description_page/widgets/description
 import 'package:assesment/view/presentation/description_page/widgets/investment_info.dart';
 import 'package:assesment/view/presentation/description_page/widgets/investment_prices.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class InvestmentDescriptionPage extends StatelessWidget {
@@ -19,16 +18,17 @@ class InvestmentDescriptionPage extends StatelessWidget {
   final String learnMore = "Learn more aboout the investment";
   @override
   Widget build(BuildContext context) {
+    var h = MediaQuery.of(context).size.height;
     return SizedBox(
-      height: Get.height * 0.87.h,
+      height: h * 0.85,
       child: Stack(
-        alignment: Alignment.topCenter,
         children: [
           SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Padding(
               padding: EdgeInsets.only(
-                  bottom: MediaQuery.of(context).viewInsets.bottom),
+                  bottom: MediaQuery.of(context).viewInsets.bottom,
+                  top: AppDimens.kTopPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
@@ -38,41 +38,51 @@ class InvestmentDescriptionPage extends StatelessWidget {
                   const Prices(),
                   AppDimens.gaps,
                   const DescriptionField(),
-                  AppDimens.gapsx2,
-                  BtnElevated(
-                      backgroundColor: AppColors.kButtonColor,
-                      child: Center(
-                        child: TextWidget(
-                            text: "invest now".toUpperCase(),
-                            fontSize: 15.sp.toInt(),
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.kWhite),
-                      ),
-                      onPressed: () {}),
-                  AppDimens.gaps,
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TextWidget(
-                                text: learnMore,
-                                fontSize: 17.sp.toInt(),
-                                fontWeight: FontWeight.w400,
-                                color: AppColors.kButtonColor)
-                            .paddingOnly(right: 5),
-                        IconHolder(
-                          icon: AppIcon().right,
-                          w: 7,
-                          h: 10,
-                        )
-                      ],
-                    ),
-                  ),
+                  AppDimens.space,
                 ],
               ).paddingAll(20),
             ),
           ),
-          const RectDesign().paddingOnly(top: 15)
+          Align(
+              alignment: Alignment.topCenter,
+              child: const RectDesign().paddingOnly(top: 15)),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                BtnElevated(
+                    backgroundColor: AppColors.kButtonColor,
+                    child: Center(
+                      child: TextWidget(
+                          text: "invest now".toUpperCase(),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.kWhite),
+                    ),
+                    onPressed: () {}),
+                AppDimens.gaps,
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextWidget(
+                              text: learnMore,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w400,
+                              color: AppColors.kButtonColor)
+                          .paddingOnly(right: 5),
+                      IconHolder(
+                        icon: AppIcon().right,
+                        w: 7,
+                        h: 10,
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ).paddingAll(20),
+          )
         ],
       ),
     );

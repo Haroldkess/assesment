@@ -25,8 +25,8 @@ class InvestmentPage extends StatelessWidget with HomeModel {
               AppDimens.gaps,
               IconHolder(
                 icon: appIcon.back,
-                h: 24.h,
-                w: 24.41.w,
+                h: 30.h,
+                w: 30.41.w,
               ),
               AppDimens.gapsx2,
               InvestmentTitle(),

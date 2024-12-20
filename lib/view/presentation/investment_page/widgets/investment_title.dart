@@ -16,10 +16,10 @@ class InvestmentTitle extends StatelessWidget with HomeModel {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          width: 250.w,
+          width: 285.w,
           child: TextWidget(
             text: title,
-            fontSize: 30.sp.toInt(),
+            fontSize: 30,
             color: AppColors.kText.withOpacity(.5),
           ),
         ),

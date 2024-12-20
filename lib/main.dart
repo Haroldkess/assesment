@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(414, 1123),
       minTextAdapt: true,
       splitScreenMode: false,
       builder: (context, child) {
         return GetMaterialApp(
-          title: 'Code assesment',
+          title: 'Code Assesment',
           theme: AppTheme.lightTheme(context: context),
           debugShowCheckedModeBanner: false,
           home: HomePage(),

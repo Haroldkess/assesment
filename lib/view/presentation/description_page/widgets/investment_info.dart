@@ -33,13 +33,13 @@ class InvestmentInfo extends StatelessWidget {
               children: [
                 TextWidget(
                   text: investment.roi,
-                  fontSize: 15.sp.toInt(),
+                  fontSize: 15,
                   fontWeight: FontWeight.w600,
                   color: AppColors.kSecondary,
                 ),
                 TextWidget(
                   text: investment.duration,
-                  fontSize: 13.sp.toInt(),
+                  fontSize: 13,
                   fontWeight: FontWeight.w300,
                 ),
               ],
@@ -57,14 +57,14 @@ class InvestmentInfo extends StatelessWidget {
               children: [
                 TextWidget(
                   text: "${investment.name} Investment",
-                  fontSize: 17.sp.toInt(),
+                  fontSize: 17,
                   fontWeight: FontWeight.w700,
                   color: AppColors.kText,
                 ),
                 AppDimens.gaps,
                 TextWidget(
                   text: "by PropertyVest",
-                  fontSize: 13.sp.toInt(),
+                  fontSize: 13,
                   fontWeight: FontWeight.w300,
                   color: AppColors.kText,
                 ),
