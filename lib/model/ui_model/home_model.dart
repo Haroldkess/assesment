@@ -2,7 +2,8 @@ import 'package:assesment/model/data_model/investment_category_model.dart';
 import 'package:assesment/model/ui_model/app_icon.dart';
 
 mixin class HomeModel {
-  final String title = "Choose an investment platform";
+  final String titleLineOne = "Choose an";
+  final String titleLineTwo = "investment platform";
   final String sub = "Not sure what you want to invest in?";
   final String hyperLink = " See recommendations.";
   final String searchTitle = "Search for investment";

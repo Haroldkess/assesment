@@ -25,8 +25,8 @@ class InvestmentPage extends StatelessWidget with HomeModel {
               AppDimens.gaps,
               IconHolder(
                 icon: appIcon.back,
-                h: 30.h,
-                w: 30.41.w,
+                h: 24.h,
+                w: 24.w,
               ),
               AppDimens.gapsx2,
               InvestmentTitle(),
@@ -50,7 +50,7 @@ class InvestmentPage extends StatelessWidget with HomeModel {
               const InvestmentList(),
             ],
           ).paddingAll(10),
-        ),
+        ).paddingOnly(top: AppDimens.kTopPadding),
       ),
     );
   }

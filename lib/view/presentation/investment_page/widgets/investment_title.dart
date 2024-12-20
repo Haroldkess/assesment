@@ -18,7 +18,15 @@ class InvestmentTitle extends StatelessWidget with HomeModel {
         SizedBox(
           width: 285.w,
           child: TextWidget(
-            text: title,
+            text: titleLineOne,
+            fontSize: 30,
+            color: AppColors.kText.withOpacity(.5),
+          ),
+        ),
+        SizedBox(
+          width: 350.w,
+          child: TextWidget(
+            text: titleLineTwo,
             fontSize: 30,
             color: AppColors.kText.withOpacity(.5),
           ),
